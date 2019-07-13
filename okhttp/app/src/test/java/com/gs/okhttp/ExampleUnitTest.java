@@ -1,4 +1,4 @@
-package com.example.gs.okhttp;
+package com.gs.okhttp;
 
 import org.junit.Test;
 

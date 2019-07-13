@@ -1,4 +1,4 @@
-package com.example.gs.okhttp;
+package com.gs.okhttp;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.gs.okhttp", appContext.getPackageName());
+        assertEquals("com.gs.okhttp", appContext.getPackageName());
     }
 }
