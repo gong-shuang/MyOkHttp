@@ -1,4 +1,4 @@
-package com.example.sample;
+package com.gs.okhttp;
 
 import android.graphics.BitmapFactory;
 import android.os.Environment;
@@ -21,12 +21,12 @@ import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
 
-import static com.example.sample.MainActivity.UPDATE_IMAGE;
-import static com.example.sample.MainActivity.UPDATE_VIEW;
+import static com.gs.okhttp.MainActivity.UPDATE_IMAGE;
+import static com.gs.okhttp.MainActivity.UPDATE_VIEW;
 
 public class UtilOkHttp {
-    private static final String TAG = "MainActivity";
-    private String URL = "http://192.168.0.107:8080/imoocOkhttp/";
+    private static final String TAG = "UtilOkHttp";
+    private String URL = "http://192.168.1.104:8080/imoocOkhttp/";
     private Handler handler;
     OkHttpClient okHttpClient = new OkHttpClient();
 
@@ -290,7 +290,7 @@ public class UtilOkHttp {
 
         // 4.执行call
         // 同步阻塞执行
-        //      Response response = call.execute();
+//              Response response = call.execute();
         // 异步执行
         call.enqueue(new Callback() {
             @Override
@@ -308,4 +308,5 @@ public class UtilOkHttp {
             }
         });
     }
+
 }
