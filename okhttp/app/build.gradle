@@ -1,4 +1,5 @@
 apply plugin: 'com.android.application'
+//apply plugin: "com.google.osdetector"
 
 android {
     compileSdkVersion 28
@@ -37,5 +38,10 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
     //okhttp
-    implementation 'com.squareup.okhttp3:okhttp:3.14.1'
+//    implementation 'com.squareup.okhttp3:okhttp:3.14.1'
+    implementation 'com.squareup.okio:okio:1.17.2'
+    implementation 'com.google.code.findbugs:jsr305:2.0.1'
+    implementation 'org.codehaus.mojo:animal-sniffer-annotations:1.16'
+    implementation 'org.conscrypt:conscrypt-openjdk:2.1.0:'
+ //   implementation 'org.codehaus.mojo:animal-sniffer-annotations:'
 }
