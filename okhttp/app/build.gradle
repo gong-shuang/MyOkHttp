@@ -36,9 +36,14 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation project(path: ':okhttp3')
+//    implementation project(path: ':okhttp3')
+    api project(path: ':logging-interceptor')
 
     //okhttp 辅助的库
     implementation 'com.squareup.okio:okio:1.17.2'
+
+//    implementation ('com.squareup.okhttp3:logging-interceptor:3.14.1'){
+//        exclude group:'com.squareup.okhttp3',module: 'okhttp'
+//    }
 
 }
