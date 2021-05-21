@@ -11,3 +11,13 @@ imooc.jpg 是图片，放在Android手机中，用于上传图片。
 
 这里的代码参考的是 慕课网的 《Android网络框架-OkHttp使用》
 
+
+
+代码提交的步骤：
+
+git add .
+
+git commit -m "第一次提交"
+
+git push
+
