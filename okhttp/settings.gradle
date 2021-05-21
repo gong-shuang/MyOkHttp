@@ -1,2 +1,0 @@
-include ':logging-interceptor'
-include ':app', ':okhttp3'
