@@ -219,6 +219,7 @@ final class RealCall implements Call {
 
     //TODO 连接服务器 负责和服务器建立连接 这里才是真正的请求网络
     interceptors.add(new ConnectInterceptor(client));
+
     if (!forWebSocket) {
       //TODO 配置okhttpClient 时设置的networkInterceptors
       //TODO 返回观察单个网络请求和响应的不可变拦截器列表。

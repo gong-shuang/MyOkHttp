@@ -40,10 +40,17 @@ public class UtilOkHttp {
     private static final String TAG = "UtilOkHttp";
     private String URL = "http://walle-ai.xyz:9999/";
     private Handler handler;
-    OkHttpClient okHttpClient = new OkHttpClient();
+
+    OkHttpClient okHttpClient;
 
     public UtilOkHttp(Handler handler){
         this.handler = handler;
+
+        // 1.获取OkHttpClient的对象
+        okHttpClient =  new OkHttpClient.Builder()
+//                .addInterceptor(new LoggingInterceptor())
+                .addNetworkInterceptor(logInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY))
+                .build();
     }
 
 
@@ -289,13 +296,10 @@ public class UtilOkHttp {
 
     public void doGet() throws IOException {
         // 1.获取OkHttpClient的对象
-//        OkHttpClient okHttpClient = new OkHttpClient();
-
-        OkHttpClient okHttpClient =  new OkHttpClient.Builder()
-//                .addNetworkInterceptor()
-//                .addInterceptor(new LoggingInterceptor())
-                .addNetworkInterceptor(logInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY))
-                .build();
+//        OkHttpClient okHttpClient =  new OkHttpClient.Builder()
+////                .addInterceptor(new LoggingInterceptor())
+//                .addNetworkInterceptor(logInterceptor.setLevel(HttpLoggingInterceptor.Level.BODY))
+//                .build();
 
         // 2.构造发送包
         Request.Builder builder = new Request.Builder();
